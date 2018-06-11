@@ -102,7 +102,7 @@ configure_teamdrive_share
 #configure_personal_share
 
 # configure json's for rclone
-configure_Json
+configure_Json_encrypt
 gdsaList=$(rclone listremotes --config /root/.config/rclone/rclone.conf | sed 's/://' | egrep '^GDSAC[0-9]+$')
 [[ -z $gdsaList ]] && log "Rclone Configuration Failure." FAIL && exit 1
 
